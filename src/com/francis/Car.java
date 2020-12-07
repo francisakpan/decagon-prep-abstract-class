@@ -8,6 +8,17 @@ class Car extends Vehicle implements Light{
     public int distance = 0;
     private int brightness = 0;
 
+    String checkDivBy3And5(int number){
+        if (number % 3 == 0 && number % 5 == 0){
+            return "foobar";
+        }else if (number % 3 == 0){
+            return "foo";
+        }else if (number % 5 == 0){
+            return "bar";
+        }
+        return "";
+    }
+
     @Override
     int move() {
         System.out.println("Car is moving at: " + ++distance);
